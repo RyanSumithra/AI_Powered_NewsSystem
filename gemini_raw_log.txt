@@ -1189,3 +1189,2706 @@ Summary: Samsung Galaxy Buds Core are rumoured to be introduced soon as the succ
 ]
 ```
 
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: UP govt renames five state engineering colleges
+Summary: 
+
+[ARTICLE 2]
+Title: IIT Bombay, Kharagpur, & others on UGC’s defaulter list for non-compliance of anti-ragging norms
+Summary: 
+
+[ARTICLE 3]
+Title: Telangana govt to review engineering college fees for better quality
+Summary: 
+
+[ARTICLE 4]
+Title: Karnataka PUC 2 Exam 3 Results 2025: How to check marks memo at karresults.nic.in & kseab.karnataka.gov.in
+Summary: 
+
+[ARTICLE 5]
+Title: Bihar BSEB OFSS 2025: Deadline extends for Class 11 admission till July 3
+Summary: 
+
+[ARTICLE 6]
+Title: CUET UG 2025 Results: How to check & download scorecards?
+Summary: 
+
+[ARTICLE 7]
+Title: FYJC Round One List 2025: Admissions to allotted colleges till July 7; know process
+Summary: 
+
+[ARTICLE 8]
+Title: CSAB NEUT Counselling 2025: Registration for BTech admissions ends on June 30
+Summary: 
+
+[ARTICLE 9]
+Title: Life in an IIT | ‘IIT Mandi has given me growth, self-discovery, and friendships that will last a lifetime’
+Summary: 
+
+[ARTICLE 10]
+Title: Admissions to these 20 PG programmes in IP University through CUET scores
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article discusses administrative changes to state engineering colleges in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "Sensitive",
+    "reasoning": "Article reports on major Indian educational institutions being flagged for non-compliance with anti-ragging norms."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article covers a state government's review of engineering college fees in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article provides information on checking Indian state board exam results."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article details an extension for Class 11 admissions under an Indian state board."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article provides information on checking results for a major Indian university entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article explains the admission process for first-year junior colleges in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article announces the registration deadline for engineering admission counselling in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article features a student's experience at an Indian Institute of Technology."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article details admission criteria for postgraduate programs at an Indian university using CUET scores."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: BSc Astronomy vs BTech Space Technology: Which degree launches a career in space?
+Summary: 
+
+[ARTICLE 2]
+Title: TG EAMCET 2025 Counselling: Telangana EAPCET phase 1 application begins at tgeapcet.nic.in
+Summary: 
+
+[ARTICLE 3]
+Title: CUET UG Result 2025 Date: Over 13 lakh candidates await CUET results for UG admission
+Summary: 
+
+[ARTICLE 4]
+Title: RRB Technician 2025 Application: Registration begins at rrbapply.gov.in for over 6,000 posts
+Summary: 
+
+[ARTICLE 5]
+Title: SSC GD 2025: Final answer keys, response sheets out at ssc.gov.in; results soon
+Summary: 
+
+[ARTICLE 6]
+Title: IIM Kashipur begins 2025–27 academic year with 433 students; 201 women enroll
+Summary: 
+
+[ARTICLE 7]
+Title: JNU PhD Admissions 2025: Registration begins at jnuee.jnu.ac.in, apply by July 7
+Summary: 
+
+[ARTICLE 8]
+Title: Monash University offers merit-based international leadership scholarship; check here
+Summary: 
+
+[ARTICLE 9]
+Title: TS SSC 10th Supplementary Results 2025 Out Updates: Telangana board Class 10th advanced supply result at bse.telangana.gov.in
+Summary: 
+
+[ARTICLE 10]
+Title: DU, University of Leeds sign MoU to expand academic collaboration
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Compares higher education degrees and career paths."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns an Indian state's higher education entrance exam and counselling."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to a national Indian university entrance exam result."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on job application for a railway board, not educational processes."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to a job recruitment exam conducted by an Indian government body, not educational content."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the start of the academic year at an Indian management institute."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns PhD admissions at a prominent Indian university."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Announces an international scholarship offered by a global university."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on 10th-grade supplementary exam results from an Indian state board."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Discusses academic collaboration between an Indian and a UK university."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: JEECUP Counselling 2025: Round 1 choice filling starts at jeecup.admissions.nic.in
+Summary: 
+
+[ARTICLE 2]
+Title: CBSE releases Class 10th, 12th supplementary exam 2025 date sheets, exams from July 15
+Summary: 
+
+[ARTICLE 3]
+Title: Karnataka 2nd PUC Exam 3 Result 2025 Date: When will Class 12th results be announced?
+Summary: 
+
+[ARTICLE 4]
+Title: ICAI CA Final 2025 Result Date: When will the May session results be out ?
+Summary: 
+
+[ARTICLE 5]
+Title: SSC MTS, Havaldar 2025 Application Form: Registration begins for 1,075 posts; eligibility, age limit and more
+Summary: 
+
+[ARTICLE 6]
+Title: IIT-Madras Zanzibar introduces new BS programme in Chemical Process Engineering
+Summary: 
+
+[ARTICLE 7]
+Title: Karnataka SSLC 2025 exam 3 hall ticket 2025 released, exams from July 5
+Summary: 
+
+[ARTICLE 8]
+Title: TNEA 2025 rank list released at tneaonline.org
+Summary: 
+
+[ARTICLE 9]
+Title: NITK Surathkal Vs IIIT Pune: Which engineering institute is better for CSE?
+Summary: 
+
+[ARTICLE 10]
+Title: TS PGECET 2025: Results declared at pgecet.tgche.ac.in
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to Indian polytechnic counselling and admissions."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on Indian national board supplementary exam dates."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns Indian state-level examination results."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to results for a major Indian professional certification exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on application details for Indian government recruitment exams, linked to educational qualifications."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces a new academic program from a premier Indian institution with an international campus."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides updates on hall tickets for an Indian state board exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the release of an engineering admission rank list in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Compares two prominent Indian engineering institutes."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces results for a postgraduate engineering entrance exam in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Déjà vu for students as CBSE rolls out 2 board exams for Class 10th, teachers welcome move
+Summary: 
+
+[ARTICLE 2]
+Title: TS SSC 10th Supplementary Results 2025: Telangana Class 10 supplementary result dates in the past
+Summary: 
+
+[ARTICLE 3]
+Title: KCET 2025: KEA to hold UGCET seat allotment interaction to ease admission process, Dr MC Sudhakar says
+Summary: 
+
+[ARTICLE 4]
+Title: NIOS Class 10th Results 2025 Date: Scorecards release dates in the past
+Summary: 
+
+[ARTICLE 5]
+Title: AP DEECET 2025 Result Declared: Rank card link at apdeecet.apcfss.in
+Summary: 
+
+[ARTICLE 6]
+Title: DU panel’s decision to drop proposed PG papers on Islam, Pakistan, China sparks row
+Summary: 
+
+[ARTICLE 7]
+Title: CUET UG Result 2025: Answers to FAQs on result validity, official website
+Summary: 
+
+[ARTICLE 8]
+Title: Maharashtra FYJC Admission 2025: First seat allotment list date deferred, now on June 30
+Summary: 
+
+[ARTICLE 9]
+Title: DoE expands Mission Mathematics to Classes 6, 7 from this academic session
+Summary: 
+
+[ARTICLE 10]
+Title: CBSE offers 2 exams for Class 10th: Taking first test mandatory
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns CBSE board exams and policy changes in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on Telangana state exam results for Class 10."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to Indian state-level entrance exams and admissions."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Deals with NIOS board exam results in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on results of an Indian state-level education entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "Sensitive",
+    "reasoning": "Concerns a controversial curriculum decision at an Indian university."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to a national university entrance exam in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on college admissions in an Indian state."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Describes expansion of an educational program within India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details a new CBSE policy for Class 10th exams in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: GPAT Result 2025 Declared: Qualifying status at natboard.edu.in
+Summary: 
+
+[ARTICLE 2]
+Title: Life in a Foreign University | ‘Rooted in Assam, giving back is the goal’
+Summary: 
+
+[ARTICLE 3]
+Title: CBSE to conduct two board exams for Class 10 from 2026
+Summary: 
+
+[ARTICLE 4]
+Title: TNAU Rank List 2025 for admission to UG programmes released; link, what’s next
+Summary: 
+
+[ARTICLE 5]
+Title: TS LAWCET Results 2025 Declared: Official website to download TG LAWCET, PGLCET rank cards
+Summary: 
+
+[ARTICLE 6]
+Title: Odisha govt to set up nine new medical colleges: Health and Family Welfare Minister
+Summary: 
+
+[ARTICLE 7]
+Title: TN SSLC, HSE Supply Exam 2025: Hall ticket download link at dge.tn.gov.in, exams begin today
+Summary: 
+
+[ARTICLE 8]
+Title: Allen Tallentex: Students will get cash prize of 2.50 Crores and scholarship of 250 Crores
+Summary: 
+
+[ARTICLE 9]
+Title: Axiom 4 Mission Group Captain Shubhanshu Shukla Educational Qualification: A journey from cracking UPSC NDA to MTech from IISc
+Summary: 
+
+[ARTICLE 10]
+Title: TS LAWCET, PGLCET Result 2025 at lawcet.tgche.ac.in: How to download TG LAWCET rank cards?
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article is about the declaration of results for an Indian national pharmacy entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Focuses on an Indian student's experience and aspirations related to studying in a foreign university."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on a significant policy change by an Indian education board regarding secondary exams."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns the release of a rank list for undergraduate admissions at an Indian university."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces the declaration of results for Indian state-level law entrance exams."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on an Indian state government's plan to establish new medical colleges."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides updates on supplementary exams for Indian state board students."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details scholarship opportunities provided by an Indian educational institution."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Highlights the educational journey and qualifications of an Indian individual, involving Indian institutions."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides instructions for downloading results for Indian state-level law entrance exams."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: AP DSC Hall Tickets 2025: Download APDSC Mega admit card for July 1, 2 exams at apdsc.apcfss.in
+Summary: 
+
+[ARTICLE 2]
+Title: IIT-Delhi scholarships for engineering students, here’s list of institute and donor-sponsored financial assistance
+Summary: 
+
+[ARTICLE 3]
+Title: IISER IAT Results 2025: IISER Aptitude Test result at iiseradmission.in, application for counselling begins today
+Summary: 
+
+[ARTICLE 4]
+Title: JoSAA Counselling 2025 Round 2: Seat allotment results released at josaa.nic.in
+Summary: 
+
+[ARTICLE 5]
+Title: Karnataka DCET 2025: How to check rank cards on cetonline.karnataka.gov.in
+Summary: 
+
+[ARTICLE 6]
+Title: IIM-Lucknow begins new academic session; 49.30% non-engineering students
+Summary: 
+
+[ARTICLE 7]
+Title: COMEDK UGET 2025 Counselling: Round 1 registration deadline extends, apply by June 30
+Summary: 
+
+[ARTICLE 8]
+Title: University of Strathclyde invites applications for MRes Mathematical Sciences for Sept 2025 intake
+Summary: 
+
+[ARTICLE 9]
+Title: UGC NET June 2025 exam begins today; guidelines, documents to carry and more
+Summary: 
+
+[ARTICLE 10]
+Title: IIT-Jammu introduces new programme – BSc in Behavioral Sciences, Predictive Analytics; admission through JEE
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to admit cards for an Indian education exam (Andhra Pradesh DSC)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on scholarships at an Indian engineering institute (IIT-Delhi)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses results and counselling for an Indian science education test (IISER IAT)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to seat allotment for Indian higher education admissions (JoSAA)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns checking rank cards for an education exam in Karnataka, India (DCET)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the start of a new academic session at an Indian management institute (IIM-Lucknow)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to counselling registration for an Indian common entrance test (COMEDK UGET)."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Invites applications for a postgraduate program at a global university (University of Strathclyde, UK)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the commencement and guidelines for an Indian national eligibility test (UGC NET)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces a new academic program at an Indian Institute of Technology (IIT-Jammu)."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: RRB NTPC 2025 exam ends for graduate posts; what’s next
+Summary: 
+
+[ARTICLE 2]
+Title: NEET UG 2025: List of medical colleges in Karnataka for MBBS admission
+Summary: 
+
+[ARTICLE 3]
+Title: SBI PO Notification 2025 Out: Application for 541 posts opens at sbi.co.in
+Summary: 
+
+[ARTICLE 4]
+Title: UPJEE 2025: JEECUP result announced, rank card released; what’s next?
+Summary: 
+
+[ARTICLE 5]
+Title: KCET 2025: KEA UGCET verification slips released at cetonline.karnataka.gov.in
+Summary: 
+
+[ARTICLE 6]
+Title: Know about the first engineering college of Telangana
+Summary: 
+
+[ARTICLE 7]
+Title: SSC CHSL 2025 Notification: Registration begins at ssc.gov.in for over 3,000 vacancies
+Summary: 
+
+[ARTICLE 8]
+Title: Special court grants bail to 2 men booked by CBI for defrauding NEET UG 2025 aspirants
+Summary: 
+
+[ARTICLE 9]
+Title: IIM-Kozhikode inducts MBA batch 2025–27 with over half the cohort women candidates
+Summary: 
+
+[ARTICLE 10]
+Title: Bihar Polytechnic Result 2025 Out: DCECE rank cards at bceceboard.bihar.gov.in; counselling schedule here
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on a government job recruitment exam, not education."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to medical college admissions and an educational entrance exam."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on a banking job recruitment exam, not education."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to an educational entrance exam and its results."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to an educational common entrance test and admission process."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the history and details of an engineering college."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on a government job recruitment exam, not education."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "Sensitive",
+    "reasoning": "Pertains to fraud against educational aspirants, making it relevant and sensitive."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the induction of a new MBA batch at a prominent educational institution."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to an educational entrance exam result and counselling."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: NEET MDS 2025 Counselling Schedule Out: Round-1 registration begins at mcc.nic.in today
+Summary: 
+
+[ARTICLE 2]
+Title: IIM Kozhikode, Emeritus launch 12-month senior management programme
+Summary: 
+
+[ARTICLE 3]
+Title: CSIR UGC NET June Session 2025: NTA extends registration deadline at csirnet.nta.ac
+Summary: 
+
+[ARTICLE 4]
+Title: West Bengal WBCHSE Class 11 Supplementary exam rules revised: What has changed
+Summary: 
+
+[ARTICLE 5]
+Title: IGNOU launches BA Home Science course under FYUP for July session
+Summary: 
+
+[ARTICLE 6]
+Title: CSAB NEUT Counselling 2025: Registration begins for BTech admissions in NE states, UTs at csab.nic.in
+Summary: 
+
+[ARTICLE 7]
+Title: CUET UG Result 2025 Date: When did NTA release UG scorecards in the past?
+Summary: 
+
+[ARTICLE 8]
+Title: SAMS Odisha Plus 3 Second Allotment List 2025: Second round results at results.samsodisha.gov.in; confirm seats by June 25
+Summary: 
+
+[ARTICLE 9]
+Title: JEECUP Polytechnic 2025: When and how to download scorecards
+Summary: 
+
+[ARTICLE 10]
+Title: Know about Maharashtra’s First Medical College — Grant Medical College in Mumbai
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to counselling for a national medical entrance exam in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Describes the launch of a management program by an Indian educational institution."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the extended registration deadline for a national eligibility test in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns revised examination rules for a state board in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces the launch of a new course by a prominent Indian university."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the start of counselling for BTech admissions in Indian states and UTs."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses past result release dates for a national university entrance test in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides an update on college admission allotment for a specific Indian state."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Offers guidance on downloading scorecards for a polytechnic entrance exam in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Presents information about a historical medical college located in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: OJEE Counselling 2025: Odisha OJEEB begins BTech admission registration at ojee.nic.in
+Summary: 
+
+[ARTICLE 2]
+Title: IP University 2025: LLM course application deadline ends at ipu.ac.in
+Summary: 
+
+[ARTICLE 3]
+Title: Punjab Police Constable Recruitment 2025: Provisional CBT answer keys released at punjabpolice.gov.in
+Summary: 
+
+[ARTICLE 4]
+Title: Parents protest against Delhi government for not sharing draft of fee regulation ordinance
+Summary: 
+
+[ARTICLE 5]
+Title: Kashmir authorities announce summer break in schools across valley
+Summary: 
+
+[ARTICLE 6]
+Title: UGC NET Admit Card 2025: NTA releases hall tickets for June 25 exam on ugcnet.nta.ac.in
+Summary: 
+
+[ARTICLE 7]
+Title: Life in an IIT | Learning to balance, lead, and grow: Lessons beyond the classroom at IIT Guwahati
+Summary: 
+
+[ARTICLE 8]
+Title: Lucknow University UGET 2025 Dates: Entrance exam to be conducted from July 5, complete timetable
+Summary: 
+
+[ARTICLE 9]
+Title: JoSAA Counselling 2025 Round 1: Seat acceptance deadline today
+Summary: 
+
+[ARTICLE 10]
+Title: Data shows 66% of Indian professionals trust degrees over short courses for career growth
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "About BTech admission counselling in Odisha."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns application deadlines for an LLM course at an Indian university."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on police recruitment exam answer keys, not educational processes or institutions."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses parents protesting a government ordinance related to education fees in Delhi."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces a summer break for schools in Kashmir."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns admit card release for the UGC NET exam, a key academic test in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Explores the student experience and learning at an IIT in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides dates for an entrance exam at Lucknow University."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to seat acceptance for JoSAA counselling for Indian engineering admissions."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses Indian professionals' preference for degrees over short courses for career advancement."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: CFA vs CPA: Choosing the right path in finance; prospects, roles
+Summary: 
+
+[ARTICLE 2]
+Title: NEET UG 2025 Result: Getting a seat in India seems difficult? Here’s how to choose the right medical college abroad
+Summary: 
+
+[ARTICLE 3]
+Title: UPSC ESE 2025 prelims result out, mains exam next
+Summary: 
+
+[ARTICLE 4]
+Title: IIT Delhi New Courses: Five new offerings beyond traditional degrees
+Summary: 
+
+[ARTICLE 5]
+Title: Govt panel to examine reliance of students on coaching, fairness of entrance exams
+Summary: 
+
+[ARTICLE 6]
+Title: RRB RPF Constable Result 2025 Out: Download scorecards from regional RRB websites
+Summary: 
+
+[ARTICLE 7]
+Title: How will Pratibha Setu help not-recommended candidates shine beyond UPSC?
+Summary: 
+
+[ARTICLE 8]
+Title: NIT Rourkela 22nd convocation held; over 2,000 degrees awarded
+Summary: 
+
+[ARTICLE 9]
+Title: Queen’s University Belfast India campus gets first dean — Professor M Satish Kumar
+Summary: 
+
+[ARTICLE 10]
+Title: JoSAA Counselling 2025 Round 1 reporting deadline extended, revised dates here
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Compares two global finance certifications and career paths."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses Indian NEET results and options for medical study abroad for Indian students."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the result of an Indian civil services examination."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces new course offerings at an Indian IIT."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses a government panel examining coaching culture and exam fairness in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the result of an Indian railway recruitment exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Explores a program to support candidates unsuccessful in Indian UPSC exams."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the convocation ceremony at an Indian NIT."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces the appointment of a dean for Queen's University Belfast's India campus."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides updates on JoSAA counselling, an Indian admission process."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: AP POLYCET 2025 counselling dates released at polycet.ap.gov.in; fee, documents required
+Summary: 
+
+[ARTICLE 2]
+Title: RPSC School Lecturer Admit Card 2025: Rajasthan RPSC School Lecturer Group 1 recruitment hall tickets at rpsc.rajasthan.gov.in
+Summary: 
+
+[ARTICLE 3]
+Title: CBSE’s mother tongue push leaves private schools in a bind — KVs may show the way forward
+Summary: 
+
+[ARTICLE 4]
+Title: RSKMP.in, MP Board Class 5th, 8th Re-Exam Result 2025 Declared Updates: Marksheet download link active
+Summary: 
+
+[ARTICLE 5]
+Title: NIT Trichy Vs IIIT Hyderabad: Which is better for CSE?
+Summary: 
+
+[ARTICLE 6]
+Title: CSBC Bihar Police Constable Admit Card 2025: CSBC Bihar Police exam city slips out, hall tickets on these dates
+Summary: 
+
+[ARTICLE 7]
+Title: Rajasthan PTET Answer Keys 2025: Response sheets out at ptetvmoukota2025.com
+Summary: 
+
+[ARTICLE 8]
+Title: CUET UG Provisional Answer Keys 2025: NTA to close objection window today
+Summary: 
+
+[ARTICLE 9]
+Title: World’s Best School Prizes 2025: 4 Indian schools among finalists
+Summary: 
+
+[ARTICLE 10]
+Title: UGC NET 2025 City Intimation Slip Highlights: NTA issues city slip for June 25 exam
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to an Indian state-level polytechnic entrance exam counselling."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns recruitment for school lecturers by an Indian state commission."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses a policy change by an Indian education board affecting schools."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on exam results from an Indian state education board."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Compares two Indian educational institutions for a specific engineering program."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns recruitment for police, not directly education."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on answer keys for an Indian state-level teacher education entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the answer key objection window for a major Indian university entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Highlights Indian schools recognized in a global education award."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns an important national-level eligibility test for higher education in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Rajasthan RSOS 10th, 12th Result 2025, rsos.rajasthan.gov.in Highlights: Results out; Girls ahead in Class 12th
+Summary: 
+
+[ARTICLE 2]
+Title: Centre, NIOS, NCERT sign agreement to boost inclusive education for children with disabilities
+Summary: 
+
+[ARTICLE 3]
+Title: QS World University Rankings 2026: Check full list of institutes
+Summary: 
+
+[ARTICLE 4]
+Title: Chandigarh, Punjab, Delhi toppers in Centre’s PGI school education report; Meghalaya at bottom
+Summary: 
+
+[ARTICLE 5]
+Title: Education Ministry recommends these states to adopt common board for Classes 10th, 12th as analysis flags poor outcomes
+Summary: 
+
+[ARTICLE 6]
+Title: IIT-Madras scholarships for engineering students, list and eligibility here
+Summary: 
+
+[ARTICLE 7]
+Title: IIT-Delhi, IIT-Bombay ranked at top 130 in QS World University Rankings 2026, MIT remains at top
+Summary: 
+
+[ARTICLE 8]
+Title: QS Rankings: IIT-Delhi jumps 27 ranks, tops India list, is 123 globally
+Summary: 
+
+[ARTICLE 9]
+Title: 2024 Board Exams: More girls cleared Class 12th in science stream than in arts
+Summary: 
+
+[ARTICLE 10]
+Title: AP DSC 2025 June 20, 21 exams deferred; fresh admit cards next week
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports specific exam results for an Indian state board (Rajasthan)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Covers an agreement by Indian educational bodies (Centre, NIOS, NCERT) to promote inclusive education."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Reports on global university rankings (QS World University Rankings)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details findings from an Indian school education report concerning specific Indian states."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses a recommendation by the Indian Education Ministry for state boards."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides details on scholarships offered by an Indian engineering institute (IIT-Madras)."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Reports on the global QS rankings, highlighting both Indian and international universities."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Focuses on an Indian university's performance within the global QS ranking system ('123 globally')."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports a statistical trend in Class 12th board exam results, commonly referring to Indian boards."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces the deferment of specific Indian state-level exams (AP DSC)."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Life in a Foreign University | ‘Studying abroad opened doors I never imagined,’ says student at UK’s Manchester Metropolitan University
+Summary: 
+
+[ARTICLE 2]
+Title: XLRI Jamshedpur invites applications for 2 new hybrid programmes
+Summary: 
+
+[ARTICLE 3]
+Title: IGNOU announces certificate programme in healthcare-waste management
+Summary: 
+
+[ARTICLE 4]
+Title: IIT-Roorkee, Futurense launch advanced certification in AI Engineering and AIOps
+Summary: 
+
+[ARTICLE 5]
+Title: Achievers of the prestigious Lifetime Achievement Award (LAA) during XLRI Home Coming (since its inception)
+Summary: 
+
+[ARTICLE 6]
+Title: THE University Impact Rankings 2025: Amrita Vishwa Vidyapeetham, 3 other Indian universities figure in top 100 list
+Summary: 
+
+[ARTICLE 7]
+Title: TS SSC Supplementary Result 2025: Telangana Board Class 10th result dates in the past
+Summary: 
+
+[ARTICLE 8]
+Title: RRB Railway Technician Recruitment 2025: From eligibility to registration dates, here are answers to FAQs
+Summary: 
+
+[ARTICLE 9]
+Title: WBJEE 2025 Result Date: When were WBJEE results declared in the past?
+Summary: 
+
+[ARTICLE 10]
+Title: SSC Constable GD Result 2025 (Out): Check cut-offs, result scorecards at ssc.gov.in
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Focuses on personal experience of studying at a foreign university."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to a specific Indian university launching new academic programs."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on an Indian university announcing a new certificate program."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns an Indian IIT launching a new advanced certification program."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to awards given by an Indian educational institution during an alumni event."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on Indian universities' performance in a global ranking."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on examination results from an Indian state school board."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to job recruitment by an Indian railway board, not directly about education."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns the result date for an Indian state-level joint entrance examination for higher education."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to results for a government job recruitment exam, not education."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: WBCAP 2025 Application: Registration begins for West Bengal UG admissions
+Summary: 
+
+[ARTICLE 2]
+Title: NTA releases CUET UG 2025 provisional answer key at cuet.nta.nic.in, raise objections by June 20
+Summary: 
+
+[ARTICLE 3]
+Title: BPSC 71st CCE 2025 Vacancies Increased: Updated vacancy list here
+Summary: 
+
+[ARTICLE 4]
+Title: Delhi University PG Admissions 2025: First seat allotment out at pgadmission.uod.ac.in
+Summary: 
+
+[ARTICLE 5]
+Title: Delhi University UG, PG Admissions 2025: What’s new this year?
+Summary: 
+
+[ARTICLE 6]
+Title: NEET UG 2025: List of medical colleges in Tamil Nadu
+Summary: 
+
+[ARTICLE 7]
+Title: JoSAA Counselling 2025: Last date for online reporting, fee payment against round-1 today
+Summary: 
+
+[ARTICLE 8]
+Title: MHT CET PCB Result 2025 Website: MHT CET results, scorecards at cetcell.mahacet.org
+Summary: 
+
+[ARTICLE 9]
+Title: MHT CET Result 2025 Declared: MHT CET 2025 result for PCB group out, 14 candidates get 100 percentile
+Summary: 
+
+[ARTICLE 10]
+Title: Indian Army Agniveer GD Admit Card 2025: Download hall tickets at joinindianarmy.nic.in
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to university admissions in an Indian state (West Bengal)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns an Indian national education entrance examination (CUET UG)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to an Indian state public service commission exam (BPSC)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "About postgraduate admissions at a major Indian university (Delhi University)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses new aspects of admissions at a prominent Indian university (Delhi University)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides information about medical colleges in an Indian state (Tamil Nadu) for a national exam (NEET UG)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns counselling for admissions to Indian engineering institutes (JoSAA)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details about results for a state-level entrance exam in India (MHT CET, Maharashtra)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the declaration of results for an Indian state-level entrance exam (MHT CET, Maharashtra)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to admit card release for an Indian armed forces recruitment examination (Agniveer)."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: UGC NET 2025 City Intimation Slip Updates: When will NTA release city slip at ugcnet.nta.ac.in?
+Summary: 
+
+[ARTICLE 2]
+Title: SSC GD Constable Result 2025: How to check result at ssc.gov.in?
+Summary: 
+
+[ARTICLE 3]
+Title: NIOS Class 12th Senior Secondary result for April/ May 2025 public exams announced
+Summary: 
+
+[ARTICLE 4]
+Title: Maharashtra CET Results Out: 22 students score 100 percentile in MHT CET 2025 PCM group
+Summary: 
+
+[ARTICLE 5]
+Title: Goa Board HSSC Timetable 2026 Out: GBSHSE Class 12 exams from Feb 10
+Summary: 
+
+[ARTICLE 6]
+Title: ‘India is the most exciting place for global higher education’: University of York VC on launching Mumbai campus
+Summary: 
+
+[ARTICLE 7]
+Title: UPSC CSE Mains 2025 registration begins; apply by June 25
+Summary: 
+
+[ARTICLE 8]
+Title: UP BEd JEE Result 2025: Websites to check scorecard?
+Summary: 
+
+[ARTICLE 9]
+Title: MSRTC to deliver bus travel passes to students at educational institutions from June 16
+Summary: 
+
+[ARTICLE 10]
+Title: Over 272 million out-of-school children across the globe: Report
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to an Indian national education examination (UGC NET)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns results for an Indian government recruitment examination (SSC GD Constable)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announcement of results for an Indian national open schooling board (NIOS)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports results for a state-level common entrance test in India (MHT CET)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Release of examination timetable by an Indian state education board (Goa Board HSSC)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses global higher education expansion with a focus on an Indian campus."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns registration for a major Indian civil services examination (UPSC CSE)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides information on results for a state-level education entrance exam in India (UP BEd JEE)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Involves a public transport service providing passes to students at Indian educational institutions."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Reports a global statistic on children lacking access to schooling."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: IP University to establish Indian Knowledge System Centre to align with ancient ‘guru-shishya parampara
+Summary: 
+
+[ARTICLE 2]
+Title: UGC NET June 2025 Admit Card: When will NTA release city slip at ugcnet.nta.ac.in?
+Summary: 
+
+[ARTICLE 3]
+Title: Schools closed across several districts in Kerala, Karnataka due to heavy rain
+Summary: 
+
+[ARTICLE 4]
+Title: TS Inter Supplementary Results 2025 (OUT): 67.4% pass 1st year, 51.7% in 2nd year
+Summary: 
+
+[ARTICLE 5]
+Title: TS Inter Supplementary Results 2025 Declared: These are the official websites to download marks memo
+Summary: 
+
+[ARTICLE 6]
+Title: Assam HSLC Compartmental Result 2025 Out: How can I check scorecards at sebaonline.org & results.assam.nic.in?
+Summary: 
+
+[ARTICLE 7]
+Title: First round of JoSAA allotment 2025: IIT-Bombay continues to remain most preferred choice
+Summary: 
+
+[ARTICLE 8]
+Title: Tgbie.cgg.gov.in, TS Telangana Inter Supplementary Results 2025 Out: How to download marks memo from results.cgg.gov.in
+Summary: 
+
+[ARTICLE 9]
+Title: TS Inter Supplementary Results 2025, Tgbie.cgg.gov.in Highlights: 67.4% students pass in Inter 1st year, 51.7% pass 2nd year
+Summary: 
+
+[ARTICLE 10]
+Title: University of Western Australia to launch its first global campuses in Chennai and Mumbai
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on an Indian university establishing an education center aligned with Indian knowledge systems."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to an Indian national eligibility test for university teaching positions."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on school closures in specific Indian states due to weather conditions."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on examination results from an Indian state education board (Telangana State Intermediate)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides information on accessing examination results from an Indian state education board."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides information on checking examination results from an Indian state education board (Assam HSLC)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on college admissions and preferences for premier Indian technical institutions (IIT-Bombay)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides information on downloading examination results from an Indian state education board."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Summarizes examination results from an Indian state education board."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on a global university establishing new campuses in specific Indian cities."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Foreign universities from USA, Australia, Italy & others to set up campuses in Navi Mumbai
+Summary: 
+
+[ARTICLE 2]
+Title: NEET UG, JEE Advanced Results 2025: AP launches free coaching for govt school students
+Summary: 
+
+[ARTICLE 3]
+Title: NEET UG 2025 Results Out: Master the counselling process with these tips
+Summary: 
+
+[ARTICLE 4]
+Title: TS Inter 1st, 2nd Year Supplementary Results 2025: TGBIE IPASE 1st, 2nd year results declared at tgbie.cgg.gov.in
+Summary: 
+
+[ARTICLE 5]
+Title: IIT Bombay introduces e-Post Graduate Diploma in Integrated Circuits
+Summary: 
+
+[ARTICLE 6]
+Title: IGNOU introduces its first master’s programme in Home Science
+Summary: 
+
+[ARTICLE 7]
+Title: Delhi Admissions 2025-26: Directorate to commence second cycle from June 20
+Summary: 
+
+[ARTICLE 8]
+Title: Life in an IIT | From Lucknow to the hills: IIT Mandi BTech student’s story of curiosity, campus life, and confidence
+Summary: 
+
+[ARTICLE 9]
+Title: NEET UG Results 2025: 12.37 lakh clear medical exam with no perfect scorers
+Summary: 
+
+[ARTICLE 10]
+Title: NEET-UG Results 2025: Two in top 10 from Pune, Mumbai; Baramati girl ranked 26
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses foreign universities establishing campuses in Navi Mumbai, India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on a state government's free coaching initiative for competitive exams in Andhra Pradesh."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides tips for the counselling process of the NEET UG exam, an Indian medical entrance."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the declaration of state board examination results in Telangana."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces a new post-graduate diploma program introduced by IIT Bombay."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on IGNOU introducing its first master's program in Home Science."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the commencement of the second cycle of school admissions in Delhi."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Features a student's experience and campus life at an Indian Institute of Technology (IIT Mandi)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the overall results and statistics for the NEET UG medical entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Highlights top performers from specific Indian cities in the NEET UG exam."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: NEET UG 2025 girl topper: AIR 5 Avika Aggarwal on how she beat the NEET odds with physics, mnemonics, and Netflix
+Summary: 
+
+[ARTICLE 2]
+Title: 58% Karnataka candidates crack NEET UG 2025, this Mangaluru student emerges as state topper
+Summary: 
+
+[ARTICLE 3]
+Title: ‘Was sleeping when mom told about UG results’: NEET 2025 AIR 2 Utkarsh Awadhiya
+Summary: 
+
+[ARTICLE 4]
+Title: Navigating the UK Job Market: How to expand your chances of employment
+Summary: 
+
+[ARTICLE 5]
+Title: TS Inter Supply Results 2025: TGBIE IPASE result for 1st, 2nd year out
+Summary: 
+
+[ARTICLE 6]
+Title: NEET UG Results 2025: Ahmedabad boy Bhavya Jha secures AIR 8, sets sights on AIIMS-New Delhi
+Summary: 
+
+[ARTICLE 7]
+Title: ‘Physics was fun’: Pune’s Krishang Joshi bags AIR 3 in NEET UG 2025
+Summary: 
+
+[ARTICLE 8]
+Title: Rajasthan BSTC Pre DElEd Result 2025: How to check results at predeledraj2025.in?
+Summary: 
+
+[ARTICLE 9]
+Title: BA Maths (Hons), BCom Maths (Hons) or BSc Maths (Hons): Which one should you choose?
+Summary: 
+
+[ARTICLE 10]
+Title: NEET UG 2025 Result: Know qualifying cut-off across all categories
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on NEET UG, an Indian education entrance exam, and a topper's study methods."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on NEET UG results in Karnataka, an Indian state."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the reaction of a NEET UG topper, an Indian education exam."
+  },
+  {
+    "is_relevant": false,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Focuses on job market navigation in the UK, not directly on education."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on results from an Indian education board (Telangana State Board of Intermediate Education)."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on NEET UG results and a topper from Ahmedabad, India, aiming for AIIMS."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the success of a NEET UG topper from Pune, India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on results for an education program in Rajasthan, India."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Provides guidance on choosing general university academic courses."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses qualifying cut-offs for the NEET UG Indian education exam."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: NEET Result 2025 Out: Where to check and download NEET UG scorecards?
+Summary: 
+
+[ARTICLE 2]
+Title: Which five foreign universities have announced campus in India?
+Summary: 
+
+[ARTICLE 3]
+Title: NEET UG Result 2025 Declared: NTA announces result, over 12 lakh candidates qualify
+Summary: 
+
+[ARTICLE 4]
+Title: NEET UG 2025: Know toppers & their success stories
+Summary: 
+
+[ARTICLE 5]
+Title: CISCE Class 10th ICSE, 12th ISC 2025 improvement exam time tables out
+Summary: 
+
+[ARTICLE 6]
+Title: NEET UG 2025 Final Answer Key, Results Out: Check NEET answer key at neet.nta.nic.in
+Summary: 
+
+[ARTICLE 7]
+Title: NEET Result 2025 (Out) Highlights: NTA NEET UG result at neet.nta.nic.in; meet NEET toppers
+Summary: 
+
+[ARTICLE 8]
+Title: NEET PG 2025 Exam City correction window at natboard.edu.in: How to make changes?
+Summary: 
+
+[ARTICLE 9]
+Title: JEECUP Provisional Answer Key 2025 at jeecup.admissions.nic.in: Important dates, steps to raise objections
+Summary: 
+
+[ARTICLE 10]
+Title: Karnataka SSLC 2 Result 2025 OUT Updates: KSEAB to conduct SSLC Exam-3 from July 5
+Summary: 
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses results of a major Indian medical entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on foreign universities establishing campuses in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the declaration of a major Indian entrance exam result."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Features toppers and their success stories from an Indian exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces improvement exam timetables for Indian school boards."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the release of final answer keys and results for an Indian exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Covers highlights and toppers of a major Indian medical entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Gives instructions for correcting exam city details for an Indian postgraduate medical exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the provisional answer key and objection process for an Indian state-level entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on results and upcoming exams for a state-level Indian school board."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: IP University to introduce orphan children quota with full fee waiver from 2025-26
+Summary: 
+
+[ARTICLE 2]
+Title: TS Inter Supplementary Results 2025: When is TS Inter 1st, 2nd year results?
+Summary: 
+
+[ARTICLE 3]
+Title: JoSAA Counselling 2025: First allotment list on June 14 at josaa.nic.in
+Summary: 
+
+[ARTICLE 4]
+Title: Centralised admission portal for UG admission in West Bengal to open on June 17
+Summary: 
+
+[ARTICLE 5]
+Title: AP SSC Supplementary Results 2025 Declared: Download AP 10th supply result at bse.ap.gov.in
+Summary: 
+
+[ARTICLE 6]
+Title: Know about the first medical college of Gujarat – BJ Medical College, Ahmedabad
+Summary: 
+
+[ARTICLE 7]
+Title: University of Strathclyde to offer £7,000 international masters scholarship in Physics
+Summary: 
+
+[ARTICLE 8]
+Title: BHU develops 63 SWAYAM courses, registration starts for 2025 session
+Summary: 
+
+[ARTICLE 9]
+Title: NEET UG Result 2025 (Out) Highlights: NEET UG result 2025 declared neet.nta.nic.in
+Summary: 
+
+[ARTICLE 10]
+Title: 162 students rescued from inundated residential school in Jharkhand after heavy rain
+Summary: The students were trapped in the school located at Pandarsoli on the Haldipokhar-Kowali Road in Kowali police station area since Saturday night.
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Relates to university admission policy and fee waivers in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on Indian state exam results."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Pertains to higher education admission counselling in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses undergraduate admissions in an Indian state."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on Indian state board exam results."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Provides historical information about an Indian medical college."
+  },
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Announces an international scholarship from a non-Indian university."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Concerns course development and registration by an Indian university for an Indian platform."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the results of a major Indian national entrance exam."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "Sensitive",
+    "reasoning": "Describes a rescue operation involving students in an Indian school affected by a natural disaster."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "education" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about education, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Students from India and China Rethink Studying in the U.S.
+Summary: The United States hosts many students and scientific researchers from the world's two largest countries, India and China. The U.S. is seen as one of the best places to get and education and on the cutting edge of innovation. But a series of moves by the Trump…
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "The article discusses international students from India and China rethinking their education in the U.S."
+  }
+]
+```
+
