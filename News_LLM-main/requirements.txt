@@ -1,5 +1,0 @@
-pyyaml
-streamlit
-feedparser
-dotenv
-google-generativeai
