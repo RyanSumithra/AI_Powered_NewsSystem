@@ -1,0 +1,1191 @@
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Samsung Galaxy M36 5G Launched in India With Exynos 1380 SoC, 5,000mAh Battery
+Summary: Samsung Galaxy M36 5G has been launched in India. The phone is available in three colour options and is equipped with an Exynos 1380 SoC chipset under the hood. For optics, the handset has a triple rear camera unit with a 50-megapixel primary sensor. The Galaxy M36 5G packs a 5,000mAh battery and will go on sale in India via Amazon.
+
+[ARTICLE 2]
+Title: Vivo X200 FE Teased to Launch in India Soon; Key Specifications Revealed
+Summary: Vivo X200 FE has been confirmed to launch in India soon. While the exact launch date is still under wraps, Vivo has teased the key specifications of the phone. It will offer a Zeiss-branded triple rear camera unit, led by a 50-megapixel primary camera. The X200 FE will run on a MediaTek Dimensity 9300+ chipset and pack a 6,500mAh battery.
+
+[ARTICLE 3]
+Title: Google Pixel Call Screening Feature Could Launch in India Soon With Support for Hindi: Report
+Summary: Google's Call Screening feature for Pixel phones is reportedly heading to India, nearly seven years after its debut. This Google Pixel phone feature uses AI to offer smart reply suggestions during calls, but it could require manual user selection to respond in India. Apple is also expected to introduce similar call screening capabilities with its upcoming iOS 26 updat...
+
+[ARTICLE 4]
+Title: Walmart-Backed Flipkart Turns to Videos and Livestream to Woo Indian Online Shoppers
+Summary: Flipkart is using social videos and livestreams to convert young consumers spending a lot of time on their smartphones into loyal customers. While the concept of online retailers using videos to boost sales has been around for years, Flipkart hopes this strategy will give it an edge over rivals like Amazon.com and Reliance Industries in India.
+
+[ARTICLE 5]
+Title: Telegram Bot Reportedly Spotted Selling Sensitive Personal Data of Indian Users
+Summary: Telegram reportedly has a bot that sells sensitive personal data of Indian users to willing buyers. As per the report, the bot operates independently and shares information such as names, addresses, father’s name, and even Aadhaar, Pan Card, and Voter ID numbers. The bot reportedly lets users find the full profile data of another Indian user based on their phone num...
+
+[ARTICLE 6]
+Title: Asus Chromebook CX14 With Intel Celeron Processor N4500 Launched: Price in India, Specifications
+Summary: The Asus Chromebook CX14 has been launched in India. The laptop made its global debut in the markets nearly two months ago. It is powered by an Intel Celeron Processor N4500, which is paired with 8GB of RAM and eMMC onboard storage. The Asus laptop gets MIL-STD-810H US military standard certification and features a 180-degree “lay-flat” hinge design.
+
+[ARTICLE 7]
+Title: Oppo K13x 5G With Dimensity 6300 SoC Sale in India Begins Today: Price, Availability
+Summary: Oppo K13x 5G will be available for purchase in India starting today (June 27), the company announced on Thursday. The phone was launched on June 23 and comes with a 360-degree Damage-Proof Armour Body and a MIL-STD 810-H certification for enhanced durability. It is powered by a Dimensity 6300 chipset and supports a suite of artificial intelligence (AI)-backed features...
+
+[ARTICLE 8]
+Title: Samsung Galaxy M36 5G Launching Today: Expected Price and Specifications
+Summary: The Samsung Galaxy M36 5G is set to be launched in India today (June 27). The handset will arrive as the successor to the Galaxy M35 5G which was introduced in the mid-range segment last year. While a majority of the specifications remain under wraps, the South Korean tech conglomerate has been teasing its capabilities in days leading up to its launch. Here’s everyt...
+
+[ARTICLE 9]
+Title: Vodafone Idea Rolls Out New Max Family Plan with Bundled Netflix Subscription: Price, Benefits
+Summary: Vodafone Idea has rolled out the Rs. 871 Vi Max Family Plan in India, which is a postpaid option for two users. The plan includes a Netflix Basic subscription, access to other OTT platforms, and 120GB of shared monthly data with rollover benefits. The plan also offers unlimited 5G in select cities and additionally allows users to choose one entertainment and one trave...
+
+[ARTICLE 10]
+Title: Samsung Galaxy Buds Core TWS With ANC, Galaxy AI Features Launched in India: Price, Specifications
+Summary: Samsung Galaxy Buds Core were introduced in India on Thursday and are priced at Rs. 4,999. The TWS earphones feature dynamic drivers, ANC support, and Galaxy AI features like the Interpreter. They are claimed to be designed for comfort as they feature secure wingtips and are said to offer the best-in-segment call quality. The Galaxy Buds C ore will go on sale starting...
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article reports on the launch and specifications of a new smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article discusses the upcoming launch and specifications of a smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article reports on a technology feature (Call Screening) potentially launching in India with local language support."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article describes Flipkart's use of digital video and livestream technology to enhance online shopping in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "Sensitive",
+    "reasoning": "Article reports on a Telegram bot illegally selling sensitive personal data of Indian users."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article reports on the launch and specifications of a new Chromebook in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article details the sale and features of a new smartphone launched in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article previews the launch of a new Samsung smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article discusses a new telecommunications plan including data, 5G, and streaming service bundles in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article reports on the launch and specifications of new TWS earphones with AI features in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: iPhone 16 Available at Rs. 68,400 With Cashback Offer, Making It a Great Deal
+Summary: iPhone 16 price in India has dropped below Rs. 70,000, even without a trade-in. Buyers with eligible bank cards can save Rs. 4,000, thanks to a cashback offer. Meanwhile, the upcoming Amazon Prime Day 2025 sale might also offer comparable or even better deals on the iPhone 16.
+
+[ARTICLE 2]
+Title: Sony Bravia 5 Series 4K Mini LED TVs With Up to 85-Inch Screen Launched: Price in India, Features
+Summary: Sony Bravia 5 series of smart TVs has been launched in India, with sizes up to 85 inches. Powered by the XR processor, the TV features XR Backlight Master Drive, XR Contrast Booster 10, and XR Triluminos Pro. It supports Dolby Vision, Dolby Atmos, and Studio Calibrated Modes, including Prime Video. The lineup also offers Acoustic Multi-Audio, Voice Zoom 3, and gaming ...
+
+[ARTICLE 3]
+Title: Oppo Reno 14 Pro 5G, Reno 14 5G India Launch Date Revealed; Specifications Teased
+Summary: Oppo Reno 14 Pro 5G and Reno 14 5G are confirmed to go official in India soon. Ahead of the launch, the Chinese tech brand has posted teasers, revealing the key specifications of the phones. The Oppo Reno 14 Pro 5G is teased to run on the MediaTek Dimensity 8450 chip. They will feature a 50-megapixel main rear camera.
+
+[ARTICLE 4]
+Title: Tecno Pova 7 5G Series India Launch Set for July 4; Rear Design Teased
+Summary: Tecno Pova 7 5G series will launch in India on July 4. The new lineup will go on sale in the country via Flipkart. The latest smartphones will come with an AI assistant, Ella, which supports multiple Indian languages and includes an Intelligent Signal Hub System. The lineup is likely to include four models.
+
+[ARTICLE 5]
+Title: OnePlus Expands Doorstep Pickup and Drop Service for Repairs to More Cities in India
+Summary: OnePlus is expanding its doorstep pickup and drop service to cover more than 19,000 PIN codes in India. An initiative under the Project Starlight, it will enable customers to get their OnePlus devices repaired without leaving their homes. Additionally, the company has also announced the OnePlus Service camp, offering free device health check-ups and software updates.
+
+[ARTICLE 6]
+Title: Realme P3x 5G Now Available in India With Limited-Time Discount: Check Price
+Summary: Realme has announced a limited-time discount on the P3x 5G handset in India. Originally priced at Rs. 13,999 and Rs. 14,999 for the 6GB+128GB and 8GB+128GB variants, the phone is now available at effective prices of Rs. 11,699 and Rs. 12,699, respectively. This includes a Rs. 1,000 price offer and a Rs. 1,300 discount coupon. The offer is valid only for June 26 and is...
+
+[ARTICLE 7]
+Title: Motorola Teases Upcoming Smartphone Launch in India, Could Be the Moto G96 5G
+Summary: Motorola is teasing the imminent India launch of a new smartphone, likely the Moto G96 5G. A Flipkart microsite highlights key features such as a dual rear camera unit, a curved display, and a Snapdragon chipset. The handset is teased in four colourways. The Moto G96 5G is expected to feature a curved 6.67-inch pOLED display, a Snapdragon 7s Gen 2 SoC, and a 50-megapi...
+
+[ARTICLE 8]
+Title: CMF Buds 2a Now Available for Purchase in India: Check Price, Features
+Summary: The CMF Buds 2a are now available for purchase in India at Rs. 2,199. They feature 12.4mm Bio-Fibre drivers with Dirac Tuning, up to 42dB ANC with Transparency and Smart Adaptive Modes. They support Bluetooth 5.4, dual device connectivity, and Ultra Bass Technology 2.0. A six-mic system with Clear Voice and Wind Noise Reduction 2.0 is claimed to improve call clarity. ...
+
+[ARTICLE 9]
+Title: Samsung 2025 Bespoke AI Appliances Launched in India, Introduces New Bespoke AI Laundry Combo
+Summary: Samsung launched its 2025 series of Bespoke AI smart appliances in India on Wednesday. The South Korean tech giant is introducing a new AI Laundry Combo with integrated washing and drying, a WindFree Air Conditioner, a Double Door Refrigerator, and a Top Load Washer as part of the 2025 Bespoke AI series.
+
+[ARTICLE 10]
+Title: Redmi Note 14 Pro+, Redmi Note 14 Pro New Colour Variant Coming to India on July 1
+Summary: Redmi will bring a new colour variant of the Redmi Note 14 Pro+ and Redmi Note 14 Pro to the Indian market. The new Champagne Gold colour variant will be launched on July 1 at 12pm. Currently, the Note 14 Pro handsets are available in Spectre Blue, Phantom Purple, and Titan Black shades.
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on iPhone pricing and offers in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the launch and features of Sony smart TVs in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the upcoming launch and teased specifications of Oppo smartphones in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces the India launch date and key features of the Tecno Pova 7 5G series."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Covers OnePlus expanding repair services in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses a limited-time discount offer for a Realme smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on Motorola's teaser for a new smartphone launch in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces the availability and features of CMF Buds 2a in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the launch of Samsung's 2025 Bespoke AI smart appliances in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces a new color variant for Redmi Note smartphones launching in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Honor X9c India Launch Confirmed; to Get 108-Megapixel Rear Camera, 1.5K Curved AMOLED Display
+Summary: The Honor X9c will launch in India soon, exclusively via Amazon. It will feature a 6.78-inch 1.5K curved AMOLED display with a 120Hz refresh rate and up to 4,000 nits brightness. The phone will be equipped with a 6,600mAh battery with 66W SuperCharge support, and a 108-megapixel main rear camera with 3x lossless zoom, OIS and EIS support. The Honor X9c will ship with ...
+
+[ARTICLE 2]
+Title: Samsung Galaxy Buds Core to Be Available for Purchase in India on June 27
+Summary: Samsung Galaxy Buds Core were expected to be introduced alongside the next generation of Galaxy foldables on July 9. However, the South Korean tech conglomerate has now teased a launch date much earlier than its Galaxy Unpacked 2025 event. A microsite dedicated to the launch on an e-commerce platform teases that the TWS earphones will go on sale on June 27.
+
+[ARTICLE 3]
+Title: iQOO Z10 Lite 5G Now Available for Purchase in India: Price, Offers and Specifications
+Summary: iQOO Z10 Lite 5G is now available for purchase in India via Amazon and the official iQOO store. It starts at Rs. 9,999 for the 4GB + 128GB option. The phone sports a 6.74-inch HD+ 90Hz LCD screen, a MediaTek Dimensity 6300 SoC with up to 8GB RAM support, and runs Android 15-based FuntouchOS 15. The handset has a 50-megapixel dual rear camera setup, a 5-megapixel selfi...
+
+[ARTICLE 4]
+Title: Bitget Joins India's ‘Sahyog’ Cyber Crime Portal to Aid Investigations
+Summary: Bitget has announced a partnership with India's cyber-crime focussed Sahyog Portal to help in related investigations. As part of its contribution to Sahyog, Bitget said it will help the law investigating officers access technical tools that are required for digital evidence collection.
+
+[ARTICLE 5]
+Title: Vu Vibe DV TV With 4K QLED Screen, 88W Integrated Soundbar Launched in India: Price, Specifications
+Summary: Vu Vibe DV TV was launched in India on Tuesday. The TV comes in five display size options, from 43-inch to 75-inch, and all variants are equipped with 4K resolution QLED screens supporting 400 nits peak brightness and bezel-less designs. A VuON AI Processor powers the Vu Vibe DV TV and it runs on Google TV OS. For audio, it gets an 88W integrated soundbar with Dolby A...
+
+[ARTICLE 6]
+Title: Oppo Pad SE India Launch Timeline Tipped; Could Launch Alongside Reno 14 Series
+Summary: Oppo Pad SE is said to go official in India in July and is likely to be launched alongside the Oppo Reno 14 series. The tablet was launched in select global markets in May with a MediaTek Helio G100 chipset and an 11-inch display with 2K resolution. The Oppo Pad SE has a 9,340mAh battery and supports 33W fast charging.
+
+[ARTICLE 7]
+Title: Samsung Opens Pre-Reservations for Upcoming Galaxy Z Foldables in India
+Summary: Samsung is set to unveil new Galaxy devices on July 9 at the Galaxy Unpacked 2025 event. Ahead of the launch, pre-reservations for the products have begun in India with a refundable Rs. 2,000 token. Customers who pre-reserve the upcoming devices are eligible for early delivery and benefits worth up to Rs. 5,999. Expected launches include the Galaxy Z Fold 7, Galaxy Z ...
+
+[ARTICLE 8]
+Title: Asus ROG Strix G16, TUF Gaming F16 Refreshed with Nvidia GeForce RTX 5050 GPUs: Price, Specifications
+Summary: Asus has refreshed its gaming laptop lineup in India with the latest Nvidia GeForce RTX 5050 GPU. The ROG G16 now boasts a 14th-gen Intel Core i7, while the TUF Gaming F16 gets a 13th-gen Core i5 CPU. Additionally, the 2024 ROG G16 variant also features the new Nvidia GPU. All three models sport 16-inch displays with up to 240Hz refresh rates and a 90Wh battery.
+
+[ARTICLE 9]
+Title: Poco F7 5G With Snapdragon 8s Gen 4 SoC, 7,550mAh Battery Launched in India: Price, Specifications
+Summary: Poco F7 5G with a Snapdragon 8s Gen 4 SoC and a 50-megapixel dual rear camera unit has been launched in India and select global markets. The Indian variant packs a 7,550mAh battery with 90W wired fast charging support. It runs on HyperOS 2.0 and offers several AI features. The Poco F7 5G has a 6,000mm sq vapour cooling chamber, a 6.83-inch 1.5K AMOLED display, and a d...
+
+[ARTICLE 10]
+Title: Tecno Spark Go 2 With 5,000mAh Battery, Free Link App Support Launched in India: Price, Specifications
+Summary: Tecno Spark Go 2 has been launched in India with a 5,000mAh battery, a 13-megapixel main rear camera, and a 120Hz LCD screen. The handset will be available via Flipkart starting July 1 at Rs. 6,999 for the sole 4GB + 64GB option. It is claimed to allow users to make calls without network support with Tecno's Free Link App.
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article is about the launch and specifications of a new smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article concerns the availability of new TWS earphones in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article details the availability, pricing, and specifications of a new smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "It covers a technology company's collaboration with an Indian cyber-crime portal for technical aid."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article reports on the launch and specifications of a new smart TV in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article discusses the anticipated launch timeline and specifications of a new tablet in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article covers pre-reservations for Samsung's upcoming foldable phones in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article covers the refresh of gaming laptops with new GPUs, including pricing and specifications, in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article announces the launch and details the specifications of a new smartphone, focusing on the Indian variant."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article covers the launch, features, and pricing of a new smartphone in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Vivo T4 Lite 5G With 50-Megapixel Rear Camera, 6,000mAh Battery Launched in India: Price, Specifications
+Summary: Vivo T4 Lite 5G has been launched in India with a MediaTek Dimensity 6300 SoC, a 6,000mAh battery and an IP64 dust and splash-resistant build. The handset is equipped with a 50-megapixel dual rear camera unit, a 5-megapixel selfie shooter and a 6.74-inch display. It ships with Android 15-based FuntouchOS 15 and gets AI-backed tools like AI Photo Enhance and AI Erase.
+
+[ARTICLE 2]
+Title: Poco F7 5G Launch in India Today: How to Watch Livestream, Expected Price, Specifications
+Summary: Poco F7 5G will launch in India and global markets today. The brand has posted teasers revealing several details of the phone. It is confirmed to come in three shades with the Snapdragon 8s Gen 4 SoC. The Poco F7 5G will house a 7,550mAh battery with support for 90W fast charging.
+
+[ARTICLE 3]
+Title: ‘Ghost’ Plume Found Beneath Oman May Explain India’s Ancient Tectonic Shift
+Summary: A buried magma plume beneath Oman’s Salma Plateau may have nudged India’s tectonic path during its collision with Eurasia, scientists report. Named “Dani,” the amagmatic plume caused no eruptions but likely altered continental motion 40 million years ago. This discovery redefines how silent, deep mantle forces can reshape continents without leaving volcanic si...
+
+[ARTICLE 4]
+Title: Tecno Spark Go 2 India Launch Date Set for June 24; Key Features, Colourways Teased
+Summary: The Tecno Spark Go 2 will launch in India on June 24 at 12pm IST via Flipkart. It will be available in black, light blue, light gold, and white shades. In a Flipkart microsite, we see the handset with a pill-shaped rear camera module and a centred hole-punch display. The phone offers AI-backed noise cancellation and is claimed to be the segment’s first to support no...
+
+[ARTICLE 5]
+Title: Amazon Diagnostics Launched in India, Offers Doorstep Sample Collection in Six Cities
+Summary: Amazon Diagnostics was launched by Amazon India on Sunday. The new service is an expansion of Amazon Medical, which includes its Pharmacy and teleconsultation services as well. The diagnostics service, which was developed in collaboration with Orange Health Labs, is currently available in six Indian cities, including Bengaluru, Delhi, Gurugram, Noida, Mumbai, and Hyde...
+
+[ARTICLE 6]
+Title: AI+ Pulse, AI+ Nova 5G Confirmed to Launch in India in July; Design, Colour Options Revealed
+Summary: AI+ Pulse and AI+ Nova 5G smartphones will launch in India in July, and will be available exclusively through Flipkart. They will be offered in Black, Blue, Green, Pink and Purple colourways. For optics, both smartphones will carry 50-megapixel dual rear camera units. They will support AI imaging and editing tools. The smartphones will fearture a water-drop notch for ...
+
+[ARTICLE 7]
+Title: Tesla Set to Open India Showrooms in July With Made-in-China EVs
+Summary: Tesla's first set of cars have arrived in India — Model Y rear-wheel drive SUVs shipped from Tesla’s China factory. Tesla is set to open its first showroom in Mumbai as early as mid July, which will be followed by one in New Delhi, according to the people familiar with the matter.
+
+[ARTICLE 8]
+Title: China’s Restrictions on Rare Earth Mineral Exports to Reportedly Adversely Impact Supply Chain Jobs in India
+Summary: China’s continued restrictions on the export of rare earth minerals could reportedly have a negative impact on India’s consumer tech supply chain job market. In 2023, the Chinese government imposed stricter export controls over seven rare earth minerals due to the ongoing tariff war and trade-related tensions. Notably, these restrictions are placed on dysprosium, ...
+
+[ARTICLE 9]
+Title: Boat Airdopes Prime 701 ANC With Up to 50 Hours Total Playback Time Launched in India: Price, Features
+Summary: The Boat Airdopes Prime 701 ANC feature dual 10mm drivers, and up to 46dB ANC with 24-bit Spatial Audio. They offer quad-mic AI ENC, in-ear detection, and allow for easy EQ customisation via the Boat Hearables app. The earphones offer a 60ms low-latency Beast Mode and Google Fast Pair technology. Together with the case, they are claimed to offer a battery life of up t...
+
+[ARTICLE 10]
+Title: BSNL 5G FWA Plans in India to Start at Rs. 999 a Month With 100Mbps Speed; Pilot to Begin in September
+Summary: BSNL recently soft launched its Q-5G Fixed Wireless Access (FWA) service in select Indian circles. Aimed at businesses and enterprises, it has been introduced with plans starting at Rs. 999 per month, which offer 100Mbps speed. Further, it will offer another higher-priced plans with faster data speeds. The pilot for the BSNL 5G FWA service will begin in September 2025...
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details a new smartphone launch and its technology specifications in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Covers the upcoming launch and specifications of a smartphone in India."
+  },
+  {
+    "is_relevant": false,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Focuses on a geological phenomenon and tectonic shift, not technology."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the upcoming launch of a smartphone in India, highlighting its features."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on Amazon's expansion into medical diagnostic services, not technology itself."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the upcoming launch of new smartphones in India with AI features."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Covers Tesla's market entry into India with its electric vehicle technology."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the impact of mineral export restrictions on India's consumer tech supply chain."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Features the launch of new audio technology (ANC earbuds) in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Describes the launch of BSNL's 5G Fixed Wireless Access service in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Redmi A4 5G Now Available in New 6GB RAM and 128GB Storage Variant in India: Price, Availability
+Summary: Redmi A4 5G was announced in India in November last year in two RAM and storage options. Now, the Xiaomi sub-brand has made the handset available in a new RAM and storage configuration in the country. The new variant offers 6GB RAM. It features the Qualcomm Snapdragon 4s Gen 2 SoC and has a 6.88-inch display.
+
+[ARTICLE 2]
+Title: Oppo K13x 5G With 50-Megapixel Rear Camera, 6,000mAh Battery Launched in India: Price, Specifications
+Summary: Oppo K13x 5G gets a 1,000 nits bright LCD display with Corning Gorilla Glass 7i protection. It features a MediaTek Dimensity 6300 SoC, a 6,000mAh battery with 45W SuperVOOC charging, a 50-megapixel dual rear camera unit, and an 8-megapixel selfie shooter. The K13x 5G has an IP65 dust and water-resistance rating and uses a biomimetic Sponge Shock Absorption System.
+
+[ARTICLE 3]
+Title: Samsung Galaxy Buds Core Launch in India Teased: Expected Features
+Summary: Samsung Galaxy Buds Core are rumoured to be introduced soon as the successor to the Galaxy Buds FE. The company now has teased the launch of its upcoming true-wireless-stereo (TWS) earphones via its social media handle. While the post does not confirm the moniker of the earbuds, the phrasing suggests that they may indeed debut as the Samsung Galaxy Buds Core.
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "The article details the launch and availability of a Redmi smartphone variant in India."
+   hostile action, no, they don't do that. Um but that's very different than a lot of other places."
+},
+{
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "The article reports on the launch and specifications of an Oppo smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "The article discusses the teased launch of Samsung's TWS earphones in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Samsung Galaxy M36 5G Launched in India With Exynos 1380 SoC, 5,000mAh Battery
+Summary: Samsung Galaxy M36 5G has been launched in India. The phone is available in three colour options and is equipped with an Exynos 1380 SoC chipset under the hood. For optics, the handset has a triple rear camera unit with a 50-megapixel primary sensor. The Galaxy M36 5G packs a 5,000mAh battery and will go on sale in India via Amazon.
+
+[ARTICLE 2]
+Title: Vivo X200 FE Teased to Launch in India Soon; Key Specifications Revealed
+Summary: Vivo X200 FE has been confirmed to launch in India soon. While the exact launch date is still under wraps, Vivo has teased the key specifications of the phone. It will offer a Zeiss-branded triple rear camera unit, led by a 50-megapixel primary camera. The X200 FE will run on a MediaTek Dimensity 9300+ chipset and pack a 6,500mAh battery.
+
+[ARTICLE 3]
+Title: Google Pixel Call Screening Feature Could Launch in India Soon With Support for Hindi: Report
+Summary: Google's Call Screening feature for Pixel phones is reportedly heading to India, nearly seven years after its debut. This Google Pixel phone feature uses AI to offer smart reply suggestions during calls, but it could require manual user selection to respond in India. Apple is also expected to introduce similar call screening capabilities with its upcoming iOS 26 updat...
+
+[ARTICLE 4]
+Title: Walmart-Backed Flipkart Turns to Videos and Livestream to Woo Indian Online Shoppers
+Summary: Flipkart is using social videos and livestreams to convert young consumers spending a lot of time on their smartphones into loyal customers. While the concept of online retailers using videos to boost sales has been around for years, Flipkart hopes this strategy will give it an edge over rivals like Amazon.com and Reliance Industries in India.
+
+[ARTICLE 5]
+Title: Telegram Bot Reportedly Spotted Selling Sensitive Personal Data of Indian Users
+Summary: Telegram reportedly has a bot that sells sensitive personal data of Indian users to willing buyers. As per the report, the bot operates independently and shares information such as names, addresses, father’s name, and even Aadhaar, Pan Card, and Voter ID numbers. The bot reportedly lets users find the full profile data of another Indian user based on their phone num...
+
+[ARTICLE 6]
+Title: Asus Chromebook CX14 With Intel Celeron Processor N4500 Launched: Price in India, Specifications
+Summary: The Asus Chromebook CX14 has been launched in India. The laptop made its global debut in the markets nearly two months ago. It is powered by an Intel Celeron Processor N4500, which is paired with 8GB of RAM and eMMC onboard storage. The Asus laptop gets MIL-STD-810H US military standard certification and features a 180-degree “lay-flat” hinge design.
+
+[ARTICLE 7]
+Title: Oppo K13x 5G With Dimensity 6300 SoC Sale in India Begins Today: Price, Availability
+Summary: Oppo K13x 5G will be available for purchase in India starting today (June 27), the company announced on Thursday. The phone was launched on June 23 and comes with a 360-degree Damage-Proof Armour Body and a MIL-STD 810-H certification for enhanced durability. It is powered by a Dimensity 6300 chipset and supports a suite of artificial intelligence (AI)-backed features...
+
+[ARTICLE 8]
+Title: Samsung Galaxy M36 5G Launching Today: Expected Price and Specifications
+Summary: The Samsung Galaxy M36 5G is set to be launched in India today (June 27). The handset will arrive as the successor to the Galaxy M35 5G which was introduced in the mid-range segment last year. While a majority of the specifications remain under wraps, the South Korean tech conglomerate has been teasing its capabilities in days leading up to its launch. Here’s everyt...
+
+[ARTICLE 9]
+Title: Vodafone Idea Rolls Out New Max Family Plan with Bundled Netflix Subscription: Price, Benefits
+Summary: Vodafone Idea has rolled out the Rs. 871 Vi Max Family Plan in India, which is a postpaid option for two users. The plan includes a Netflix Basic subscription, access to other OTT platforms, and 120GB of shared monthly data with rollover benefits. The plan also offers unlimited 5G in select cities and additionally allows users to choose one entertainment and one trave...
+
+[ARTICLE 10]
+Title: Samsung Galaxy Buds Core TWS With ANC, Galaxy AI Features Launched in India: Price, Specifications
+Summary: Samsung Galaxy Buds Core were introduced in India on Thursday and are priced at Rs. 4,999. The TWS earphones feature dynamic drivers, ANC support, and Galaxy AI features like the Interpreter. They are claimed to be designed for comfort as they feature secure wingtips and are said to offer the best-in-segment call quality. The Galaxy Buds C ore will go on sale starting...
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article reports on the launch of a new Samsung smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article teases the upcoming launch and specifications of a new Vivo smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article discusses the potential launch of Google Pixel's AI-powered Call Screening feature in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article describes Flipkart's use of video and livestream technology to engage online shoppers in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "Sensitive",
+    "reasoning": "Article reports on a Telegram bot allegedly selling sensitive personal data of Indian users."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article details the launch of the Asus Chromebook CX14 in India with its specifications."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article announces the start of sales for the Oppo K13x 5G smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article anticipates the launch of the Samsung Galaxy M36 5G smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article details Vodafone Idea's new telecom plan in India, including 5G and OTT benefits."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Article announces the launch of Samsung Galaxy Buds Core TWS earphones with AI features in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: iPhone 16 Available at Rs. 68,400 With Cashback Offer, Making It a Great Deal
+Summary: iPhone 16 price in India has dropped below Rs. 70,000, even without a trade-in. Buyers with eligible bank cards can save Rs. 4,000, thanks to a cashback offer. Meanwhile, the upcoming Amazon Prime Day 2025 sale might also offer comparable or even better deals on the iPhone 16.
+
+[ARTICLE 2]
+Title: Sony Bravia 5 Series 4K Mini LED TVs With Up to 85-Inch Screen Launched: Price in India, Features
+Summary: Sony Bravia 5 series of smart TVs has been launched in India, with sizes up to 85 inches. Powered by the XR processor, the TV features XR Backlight Master Drive, XR Contrast Booster 10, and XR Triluminos Pro. It supports Dolby Vision, Dolby Atmos, and Studio Calibrated Modes, including Prime Video. The lineup also offers Acoustic Multi-Audio, Voice Zoom 3, and gaming ...
+
+[ARTICLE 3]
+Title: Oppo Reno 14 Pro 5G, Reno 14 5G India Launch Date Revealed; Specifications Teased
+Summary: Oppo Reno 14 Pro 5G and Reno 14 5G are confirmed to go official in India soon. Ahead of the launch, the Chinese tech brand has posted teasers, revealing the key specifications of the phones. The Oppo Reno 14 Pro 5G is teased to run on the MediaTek Dimensity 8450 chip. They will feature a 50-megapixel main rear camera.
+
+[ARTICLE 4]
+Title: Tecno Pova 7 5G Series India Launch Set for July 4; Rear Design Teased
+Summary: Tecno Pova 7 5G series will launch in India on July 4. The new lineup will go on sale in the country via Flipkart. The latest smartphones will come with an AI assistant, Ella, which supports multiple Indian languages and includes an Intelligent Signal Hub System. The lineup is likely to include four models.
+
+[ARTICLE 5]
+Title: OnePlus Expands Doorstep Pickup and Drop Service for Repairs to More Cities in India
+Summary: OnePlus is expanding its doorstep pickup and drop service to cover more than 19,000 PIN codes in India. An initiative under the Project Starlight, it will enable customers to get their OnePlus devices repaired without leaving their homes. Additionally, the company has also announced the OnePlus Service camp, offering free device health check-ups and software updates.
+
+[ARTICLE 6]
+Title: Realme P3x 5G Now Available in India With Limited-Time Discount: Check Price
+Summary: Realme has announced a limited-time discount on the P3x 5G handset in India. Originally priced at Rs. 13,999 and Rs. 14,999 for the 6GB+128GB and 8GB+128GB variants, the phone is now available at effective prices of Rs. 11,699 and Rs. 12,699, respectively. This includes a Rs. 1,000 price offer and a Rs. 1,300 discount coupon. The offer is valid only for June 26 and is...
+
+[ARTICLE 7]
+Title: Motorola Teases Upcoming Smartphone Launch in India, Could Be the Moto G96 5G
+Summary: Motorola is teasing the imminent India launch of a new smartphone, likely the Moto G96 5G. A Flipkart microsite highlights key features such as a dual rear camera unit, a curved display, and a Snapdragon chipset. The handset is teased in four colourways. The Moto G96 5G is expected to feature a curved 6.67-inch pOLED display, a Snapdragon 7s Gen 2 SoC, and a 50-megapi...
+
+[ARTICLE 8]
+Title: CMF Buds 2a Now Available for Purchase in India: Check Price, Features
+Summary: The CMF Buds 2a are now available for purchase in India at Rs. 2,199. They feature 12.4mm Bio-Fibre drivers with Dirac Tuning, up to 42dB ANC with Transparency and Smart Adaptive Modes. They support Bluetooth 5.4, dual device connectivity, and Ultra Bass Technology 2.0. A six-mic system with Clear Voice and Wind Noise Reduction 2.0 is claimed to improve call clarity. ...
+
+[ARTICLE 9]
+Title: Samsung 2025 Bespoke AI Appliances Launched in India, Introduces New Bespoke AI Laundry Combo
+Summary: Samsung launched its 2025 series of Bespoke AI smart appliances in India on Wednesday. The South Korean tech giant is introducing a new AI Laundry Combo with integrated washing and drying, a WindFree Air Conditioner, a Double Door Refrigerator, and a Top Load Washer as part of the 2025 Bespoke AI series.
+
+[ARTICLE 10]
+Title: Redmi Note 14 Pro+, Redmi Note 14 Pro New Colour Variant Coming to India on July 1
+Summary: Redmi will bring a new colour variant of the Redmi Note 14 Pro+ and Redmi Note 14 Pro to the Indian market. The new Champagne Gold colour variant will be launched on July 1 at 12pm. Currently, the Note 14 Pro handsets are available in Spectre Blue, Phantom Purple, and Titan Black shades.
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on pricing and offers for a tech gadget (iPhone 16) in the Indian market."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the launch, features, and pricing of new smart TVs in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces upcoming smartphone launches and teased specifications for the Indian market."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on the upcoming launch and features of a new smartphone series in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Describes a tech company's expanded repair services for its devices across India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on a limited-time discount for a smartphone model available in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses a teased smartphone launch for the Indian market, including anticipated features."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the availability, pricing, and features of new wireless earbuds in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the launch of Samsung's new AI-powered smart home appliances in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces a new color variant for existing Redmi smartphone models coming to the Indian market."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Honor X9c India Launch Confirmed; to Get 108-Megapixel Rear Camera, 1.5K Curved AMOLED Display
+Summary: The Honor X9c will launch in India soon, exclusively via Amazon. It will feature a 6.78-inch 1.5K curved AMOLED display with a 120Hz refresh rate and up to 4,000 nits brightness. The phone will be equipped with a 6,600mAh battery with 66W SuperCharge support, and a 108-megapixel main rear camera with 3x lossless zoom, OIS and EIS support. The Honor X9c will ship with ...
+
+[ARTICLE 2]
+Title: Samsung Galaxy Buds Core to Be Available for Purchase in India on June 27
+Summary: Samsung Galaxy Buds Core were expected to be introduced alongside the next generation of Galaxy foldables on July 9. However, the South Korean tech conglomerate has now teased a launch date much earlier than its Galaxy Unpacked 2025 event. A microsite dedicated to the launch on an e-commerce platform teases that the TWS earphones will go on sale on June 27.
+
+[ARTICLE 3]
+Title: iQOO Z10 Lite 5G Now Available for Purchase in India: Price, Offers and Specifications
+Summary: iQOO Z10 Lite 5G is now available for purchase in India via Amazon and the official iQOO store. It starts at Rs. 9,999 for the 4GB + 128GB option. The phone sports a 6.74-inch HD+ 90Hz LCD screen, a MediaTek Dimensity 6300 SoC with up to 8GB RAM support, and runs Android 15-based FuntouchOS 15. The handset has a 50-megapixel dual rear camera setup, a 5-megapixel selfi...
+
+[ARTICLE 4]
+Title: Bitget Joins India's ‘Sahyog’ Cyber Crime Portal to Aid Investigations
+Summary: Bitget has announced a partnership with India's cyber-crime focussed Sahyog Portal to help in related investigations. As part of its contribution to Sahyog, Bitget said it will help the law investigating officers access technical tools that are required for digital evidence collection.
+
+[ARTICLE 5]
+Title: Vu Vibe DV TV With 4K QLED Screen, 88W Integrated Soundbar Launched in India: Price, Specifications
+Summary: Vu Vibe DV TV was launched in India on Tuesday. The TV comes in five display size options, from 43-inch to 75-inch, and all variants are equipped with 4K resolution QLED screens supporting 400 nits peak brightness and bezel-less designs. A VuON AI Processor powers the Vu Vibe DV TV and it runs on Google TV OS. For audio, it gets an 88W integrated soundbar with Dolby A...
+
+[ARTICLE 6]
+Title: Oppo Pad SE India Launch Timeline Tipped; Could Launch Alongside Reno 14 Series
+Summary: Oppo Pad SE is said to go official in India in July and is likely to be launched alongside the Oppo Reno 14 series. The tablet was launched in select global markets in May with a MediaTek Helio G100 chipset and an 11-inch display with 2K resolution. The Oppo Pad SE has a 9,340mAh battery and supports 33W fast charging.
+
+[ARTICLE 7]
+Title: Samsung Opens Pre-Reservations for Upcoming Galaxy Z Foldables in India
+Summary: Samsung is set to unveil new Galaxy devices on July 9 at the Galaxy Unpacked 2025 event. Ahead of the launch, pre-reservations for the products have begun in India with a refundable Rs. 2,000 token. Customers who pre-reserve the upcoming devices are eligible for early delivery and benefits worth up to Rs. 5,999. Expected launches include the Galaxy Z Fold 7, Galaxy Z ...
+
+[ARTICLE 8]
+Title: Asus ROG Strix G16, TUF Gaming F16 Refreshed with Nvidia GeForce RTX 5050 GPUs: Price, Specifications
+Summary: Asus has refreshed its gaming laptop lineup in India with the latest Nvidia GeForce RTX 5050 GPU. The ROG G16 now boasts a 14th-gen Intel Core i7, while the TUF Gaming F16 gets a 13th-gen Core i5 CPU. Additionally, the 2024 ROG G16 variant also features the new Nvidia GPU. All three models sport 16-inch displays with up to 240Hz refresh rates and a 90Wh battery.
+
+[ARTICLE 9]
+Title: Poco F7 5G With Snapdragon 8s Gen 4 SoC, 7,550mAh Battery Launched in India: Price, Specifications
+Summary: Poco F7 5G with a Snapdragon 8s Gen 4 SoC and a 50-megapixel dual rear camera unit has been launched in India and select global markets. The Indian variant packs a 7,550mAh battery with 90W wired fast charging support. It runs on HyperOS 2.0 and offers several AI features. The Poco F7 5G has a 6,000mm sq vapour cooling chamber, a 6.83-inch 1.5K AMOLED display, and a d...
+
+[ARTICLE 10]
+Title: Tecno Spark Go 2 With 5,000mAh Battery, Free Link App Support Launched in India: Price, Specifications
+Summary: Tecno Spark Go 2 has been launched in India with a 5,000mAh battery, a 13-megapixel main rear camera, and a 120Hz LCD screen. The handset will be available via Flipkart starting July 1 at Rs. 6,999 for the sole 4GB + 64GB option. It is claimed to allow users to make calls without network support with Tecno's Free Link App.
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Focuses on the launch and specifications of a new mobile phone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the availability of new TWS earphones in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the availability, price, and specifications of a new 5G phone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Covers a technology company partnering with an Indian cyber-crime portal for investigations."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the launch, price, and specifications of a new smart TV in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the tipped launch timeline for a new tablet in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on Samsung opening pre-reservations for new foldable devices in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Covers the refresh of Asus gaming laptops with new GPUs and CPUs in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Announces the launch, price, and specifications of a new 5G phone, with a focus on the Indian variant."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the launch, price, and specifications of a new smartphone in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Vivo T4 Lite 5G With 50-Megapixel Rear Camera, 6,000mAh Battery Launched in India: Price, Specifications
+Summary: Vivo T4 Lite 5G has been launched in India with a MediaTek Dimensity 6300 SoC, a 6,000mAh battery and an IP64 dust and splash-resistant build. The handset is equipped with a 50-megapixel dual rear camera unit, a 5-megapixel selfie shooter and a 6.74-inch display. It ships with Android 15-based FuntouchOS 15 and gets AI-backed tools like AI Photo Enhance and AI Erase.
+
+[ARTICLE 2]
+Title: Poco F7 5G Launch in India Today: How to Watch Livestream, Expected Price, Specifications
+Summary: Poco F7 5G will launch in India and global markets today. The brand has posted teasers revealing several details of the phone. It is confirmed to come in three shades with the Snapdragon 8s Gen 4 SoC. The Poco F7 5G will house a 7,550mAh battery with support for 90W fast charging.
+
+[ARTICLE 3]
+Title: ‘Ghost’ Plume Found Beneath Oman May Explain India’s Ancient Tectonic Shift
+Summary: A buried magma plume beneath Oman’s Salma Plateau may have nudged India’s tectonic path during its collision with Eurasia, scientists report. Named “Dani,” the amagmatic plume caused no eruptions but likely altered continental motion 40 million years ago. This discovery redefines how silent, deep mantle forces can reshape continents without leaving volcanic si...
+
+[ARTICLE 4]
+Title: Tecno Spark Go 2 India Launch Date Set for June 24; Key Features, Colourways Teased
+Summary: The Tecno Spark Go 2 will launch in India on June 24 at 12pm IST via Flipkart. It will be available in black, light blue, light gold, and white shades. In a Flipkart microsite, we see the handset with a pill-shaped rear camera module and a centred hole-punch display. The phone offers AI-backed noise cancellation and is claimed to be the segment’s first to support no...
+
+[ARTICLE 5]
+Title: Amazon Diagnostics Launched in India, Offers Doorstep Sample Collection in Six Cities
+Summary: Amazon Diagnostics was launched by Amazon India on Sunday. The new service is an expansion of Amazon Medical, which includes its Pharmacy and teleconsultation services as well. The diagnostics service, which was developed in collaboration with Orange Health Labs, is currently available in six Indian cities, including Bengaluru, Delhi, Gurugram, Noida, Mumbai, and Hyde...
+
+[ARTICLE 6]
+Title: AI+ Pulse, AI+ Nova 5G Confirmed to Launch in India in July; Design, Colour Options Revealed
+Summary: AI+ Pulse and AI+ Nova 5G smartphones will launch in India in July, and will be available exclusively through Flipkart. They will be offered in Black, Blue, Green, Pink and Purple colourways. For optics, both smartphones will carry 50-megapixel dual rear camera units. They will support AI imaging and editing tools. The smartphones will fearture a water-drop notch for ...
+
+[ARTICLE 7]
+Title: Tesla Set to Open India Showrooms in July With Made-in-China EVs
+Summary: Tesla's first set of cars have arrived in India — Model Y rear-wheel drive SUVs shipped from Tesla’s China factory. Tesla is set to open its first showroom in Mumbai as early as mid July, which will be followed by one in New Delhi, according to the people familiar with the matter.
+
+[ARTICLE 8]
+Title: China’s Restrictions on Rare Earth Mineral Exports to Reportedly Adversely Impact Supply Chain Jobs in India
+Summary: China’s continued restrictions on the export of rare earth minerals could reportedly have a negative impact on India’s consumer tech supply chain job market. In 2023, the Chinese government imposed stricter export controls over seven rare earth minerals due to the ongoing tariff war and trade-related tensions. Notably, these restrictions are placed on dysprosium, ...
+
+[ARTICLE 9]
+Title: Boat Airdopes Prime 701 ANC With Up to 50 Hours Total Playback Time Launched in India: Price, Features
+Summary: The Boat Airdopes Prime 701 ANC feature dual 10mm drivers, and up to 46dB ANC with 24-bit Spatial Audio. They offer quad-mic AI ENC, in-ear detection, and allow for easy EQ customisation via the Boat Hearables app. The earphones offer a 60ms low-latency Beast Mode and Google Fast Pair technology. Together with the case, they are claimed to offer a battery life of up t...
+
+[ARTICLE 10]
+Title: BSNL 5G FWA Plans in India to Start at Rs. 999 a Month With 100Mbps Speed; Pilot to Begin in September
+Summary: BSNL recently soft launched its Q-5G Fixed Wireless Access (FWA) service in select Indian circles. Aimed at businesses and enterprises, it has been introduced with plans starting at Rs. 999 per month, which offer 100Mbps speed. Further, it will offer another higher-priced plans with faster data speeds. The pilot for the BSNL 5G FWA service will begin in September 2025...
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the launch and specifications of a new smartphone in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the upcoming launch and specifications of a smartphone primarily focused on India."
+  },
+  {
+    "is_relevant": false,
+    "region": "Global",
+    "content_type": "General",
+    "reasoning": "Focuses on a geological discovery related to plate tectonics, not technology."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the upcoming launch and features of a new smartphone in India."
+  },
+  {
+    "is_relevant": false,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Describes the launch of a medical diagnostic service, which is a healthcare offering, not core technology."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the upcoming launch and features of new AI-enabled smartphones in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses Tesla's market entry and showroom opening in India, involving electric vehicle technology."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Discusses the impact of mineral export restrictions on India's consumer tech supply chain and job market."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the launch and features of new audio technology gadgets in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the launch and pricing plans for a 5G fixed wireless access service in India."
+  }
+]
+```
+
+
+--- Prompt ---
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "technology" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about technology, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+[ARTICLE 1]
+Title: Redmi A4 5G Now Available in New 6GB RAM and 128GB Storage Variant in India: Price, Availability
+Summary: Redmi A4 5G was announced in India in November last year in two RAM and storage options. Now, the Xiaomi sub-brand has made the handset available in a new RAM and storage configuration in the country. The new variant offers 6GB RAM. It features the Qualcomm Snapdragon 4s Gen 2 SoC and has a 6.88-inch display.
+
+[ARTICLE 2]
+Title: Oppo K13x 5G With 50-Megapixel Rear Camera, 6,000mAh Battery Launched in India: Price, Specifications
+Summary: Oppo K13x 5G gets a 1,000 nits bright LCD display with Corning Gorilla Glass 7i protection. It features a MediaTek Dimensity 6300 SoC, a 6,000mAh battery with 45W SuperVOOC charging, a 50-megapixel dual rear camera unit, and an 8-megapixel selfie shooter. The K13x 5G has an IP65 dust and water-resistance rating and uses a biomimetic Sponge Shock Absorption System.
+
+[ARTICLE 3]
+Title: Samsung Galaxy Buds Core Launch in India Teased: Expected Features
+Summary: Samsung Galaxy Buds Core are rumoured to be introduced soon as the successor to the Galaxy Buds FE. The company now has teased the launch of its upcoming true-wireless-stereo (TWS) earphones via its social media handle. While the post does not confirm the moniker of the earbuds, the phrasing suggests that they may indeed debut as the Samsung Galaxy Buds Core.
+
+--- Response ---
+```json
+[
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Details the launch of a new smartphone variant and its specifications in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Covers the launch of a new smartphone with its features and specifications in India."
+  },
+  {
+    "is_relevant": true,
+    "region": "India",
+    "content_type": "General",
+    "reasoning": "Reports on the teased launch and expected features of new TWS earphones in India."
+  }
+]
+```
+

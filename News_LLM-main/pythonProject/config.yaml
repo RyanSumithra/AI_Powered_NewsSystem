@@ -1,0 +1,19 @@
+# config.yaml
+
+user_filter:
+  topic: ""
+  region: ""
+  content_type: ""
+
+# 🔢 Limits
+max_articles: 50
+
+# ⚙️ Scoring settings
+scoring:
+  batch_size: 10
+  use_prefilter: true
+  min_score: 30
+
+# 📤 Delivery method
+delivery:
+  method: "email"  # or "none"

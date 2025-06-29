@@ -1,0 +1,26 @@
+You are an expert news classifier. You will receive a list of news articles.
+
+Your task is to determine for each article:
+- Whether it's relevant to the topic "{{topic}}" (e.g., Technology, Education, etc.)
+- Whether the region is "India" or "Global"
+- Whether the content is "General" or "Sensitive"
+- A one-line explanation
+
+Instructions:
+- Consider articles relevant if they are clearly about {{topic}}, even if they mention brands, launches, startups, policies, or gadgets.
+- Consider region "India" only if the article is focused on Indian events, markets, policies, companies, or happenings.
+- Return only a **JSON array of objects**, no text before or after.
+
+Format:
+[
+  {
+    "is_relevant": true/false,
+    "region": "India" or "Global",
+    "content_type": "General" or "Sensitive",
+    "reasoning": "Brief reason"
+  },
+  ...
+]
+
+Articles:
+{{articles_block}}
